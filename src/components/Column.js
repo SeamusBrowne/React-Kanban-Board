@@ -1,17 +1,7 @@
-// const Column = () => {
-//   return (
-//     <div>Column</div>
-//   )
-// }
-
-// export default Column
-
 import React, { useState } from "react";
 
 import Card from "./Card";
 import AddCard from "./AddCard";
-
-//import "./Board.css";
 
 function Column(props) {
 
@@ -35,7 +25,7 @@ function Column(props) {
             updateCard={props.updateCard}
           />
         ))}
-        <AddCard //Editable
+        <AddCard 
           text="+ Add Card"
           placeholder="Enter Card Title"
           displayClass="column_add-card"
