@@ -1,9 +1,4 @@
-import { FaTimes } from 'react-icons/fa'
-
 import React, { useState } from "react";
-
-// import "./Card.css";
-// import CardInfo from "./CardInfo/CardInfo";
 
 function Card(props) {
 
@@ -11,20 +6,11 @@ function Card(props) {
 
   return (
     <>
-      {/* {showModal && (
-        <CardInfo
-          onClose={() => setShowModal(false)}
-          card={props.card}
-          boardId={props.boardId}
-          updateCard={props.updateCard}
-        />
-      )} */}
       <div
         className="card"
         draggable
-        onDragEnd={() => props.dragEnded(props.boardId, id)}
-        onDragEnter={() => props.dragEntered(props.boardId, id)}
-        //onClick={() => setShowModal(true)}
+        onDragEnd={() => props.dragEnded(props.columnId, id)}
+        onDragEnter={() => props.dragEntered(props.columnId, id)}
       >
 
         <div className="card_title">{title}</div>
