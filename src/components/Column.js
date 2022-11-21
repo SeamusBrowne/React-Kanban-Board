@@ -20,8 +20,8 @@ function Column(props) {
             card={item}
             columnId={props.column.id}
             removeCard={props.removeCard}
-            dragEntered={props.dragEntered}
-            dragEnded={props.dragEnded}
+            dragTo={props.dragTo}
+            dragFrom={props.dragFrom}
             updateCard={props.updateCard}
           />
         ))}
