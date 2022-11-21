@@ -126,11 +126,3 @@ function App() {
 }
 
 export default App;
-
-
-// Column = Board
-// AddCard = Editable
-
-// Header = app_nav
-
-// Modal and Dropdown not needed
