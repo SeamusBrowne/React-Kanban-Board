@@ -1,7 +1,3 @@
-// import { useState, useEffect } from "react"; FROM EXISTING
-// import Header from './components/Header';
-// import Cards from './components/Cards';
-
 import React, { useEffect, useState } from "react";
 
 import Column from "./components/Column";
