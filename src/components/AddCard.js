@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 
-// import { X } from "react-feather";
-
 function AddCard(props) {
-  const [isEditable, setIsEditable] = useState(false);
+  const [isAddible, setisAddible] = useState(false);
   const [inputText, setInputText] = useState(props.defaultValue || "");
 
   const submission = (e) => {
@@ -12,12 +10,12 @@ function AddCard(props) {
       setInputText("");
       props.onSubmit(inputText);
     }
-    setIsEditable(false);
-  };
+    setisAddible(false);
+  }
 
   return (
     <div className="add_card">
-      {isEditable ? (
+      {isAddible ? (
         <form
           className={`add_card_edit ${props.editClass ? props.editClass : ""}`}
           onSubmit={submission}
@@ -31,7 +29,8 @@ function AddCard(props) {
           />
           <div className="add_card_edit_footer">
             <button type="submit">{props.buttonText || "Add"}</button>
-            <X onClick={() => setIsEditable(false)} className="closeIcon" />
+            <button className="delete_add">X</button>
+            <X onClick={() => setisAddible(false)} className="closeIcon" />
           </div>
         </form>
       ) : (
@@ -39,7 +38,7 @@ function AddCard(props) {
           className={`add_card_text ${
             props.displayClass ? props.displayClass : ""
           }`}
-          onClick={() => setIsEditable(true)}
+          onClick={() => setisAddible(true)}
         >
           {props.text}
         </p>
