@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 function Card(props) {
 
@@ -13,8 +13,9 @@ function Card(props) {
         onDragEnter={() => props.dragFrom(props.columnId, id)}
       >
 
-        <div className="card_title">{title}</div>
-        <div className="card_footer"></div>
+        <div className="card_title">{title}
+          <button className="card_delete" onClick={() => props.removeCard(props.columnId, id)}>X</button>
+        </div>
       </div>
     </>
   );
