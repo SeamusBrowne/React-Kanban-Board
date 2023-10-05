@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import Card from "./Card";
 import AddCard from "./AddCard";
@@ -10,7 +10,7 @@ function Column(props) {
       <div className="column_header">
         <p className="column_header_title">
           {props.column?.title}
-          <span>{props.column?.cards?.length || 0}</span>
+          <span style={{ color: props.column?.cards?.length >= 3 ? 'red' : 'gray'}}>{props.column?.cards?.length || 0}</span>
         </p>
       </div>
       <div className="column_cards custom-scroll">
@@ -27,8 +27,8 @@ function Column(props) {
         ))}
         <AddCard 
           text="+ Add Card"
-          placeholder="Enter Card Title"
-          displayClass="column_add-card"
+          placeholder="Enter Card Name"
+          displayClass="column_add_card"
           editClass="column_add-card_edit"
           onSubmit={(value) => props.addCard(props.column?.id, value)}
         />
